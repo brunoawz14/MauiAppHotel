@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHote1.Views.Sobre">
+    <VerticalStackLayout>
+        <Label 
+            Text="Sobre"
+            FontFamily="OswaldBold"
+            FontSize="40"
+            Padding="10"
+            HorizontalTextAlignment="Center"
+            TextColor="White" />
+
+
+        <Label 
+        Margin="10"
+        FontFamily="OswaldRegular"
+        Text="Este aplicativo foi desenvolvido como atividade prática do curso de Desenvolvimento de Sistemas, com finalidade exclusivamente educacional. O projeto contou com o auxílio e orientação do professor Tiago Antonio."/>
+
+        <Label TextColor="White" LineBreakMode="WordWrap" Margin="10">
+            <Label.Text>
+                Desenvolvido por:
+Bruno dos Anjos (Aluno)
+Tiago Antonio (Professor)
+            </Label.Text>
+        </Label>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
