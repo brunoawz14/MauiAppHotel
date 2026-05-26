@@ -7,7 +7,7 @@
              BackgroundColor="#222222">
     <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="20">
         <Label 
-            Text="Calculo da Diaria"
+            Text="{Binding QuartoSelecionado.Descricao}"
             FontFamily="OswaldBold"
             FontSize="40"
             Padding="10"
@@ -21,12 +21,12 @@
                 Spacing="20">
                 <HorizontalStackLayout>
                     <Label Text="Adultos: " FontFamily="OswaldMedium"/>
-                    <Label Text="2" TextColor="White"/>
+                    <Label Text="{Binding QtnAdultos}" TextColor="White"/>
 
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label Text="Crianças: " FontFamily="OswaldMedium"/>
-                    <Label Text="2" TextColor="White"/>
+                    <Label Text="{Binding QtnCriancas}" TextColor="White"/>
                 </HorizontalStackLayout>
             </HorizontalStackLayout>
         </Frame>
@@ -37,9 +37,9 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out" FontFamily="OswaldMedium"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" FontFamily="OswaldMedium"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2000"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2000"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="3"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DatacheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DatacheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}"/>
             </Grid>
         </Frame>
 
@@ -47,7 +47,8 @@
         <Frame Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Valor Total: " FontFamily="OswaldMedium"/>
-                <Label Text="R$ 750,00"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"
+                       TextColor="White"/>
             </HorizontalStackLayout>
         </Frame>
 
